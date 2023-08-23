@@ -2,11 +2,10 @@
 {
     internal class Program
     {
-        int zahl1 = 15;
-        string name = "Aron Herbel";
+        
         static void Main(string[] args)
         {
-            Console.WriteLine();
+            Console.WriteLine("Hey ich bin Aron");
         }
     }
 }
