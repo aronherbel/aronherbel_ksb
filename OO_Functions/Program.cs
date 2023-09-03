@@ -108,7 +108,7 @@ namespace OO_Functions
                                 case 4:
                                 // hier erhalt ich fehler:
                                 // double reverse = MyMath.ReverseArray(numbers);
-                                Console.WriteLine($"Resultat beträgt {reverse}");
+                                //Console.WriteLine($"Resultat beträgt {reverse}");
                                 break;
                         }
 

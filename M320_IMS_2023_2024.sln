@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M320_IMS_2023_2024", "M320_IMS_2023_2024\M320_IMS_2023_2024.csproj", "{FE94F66F-E0BA-49BC-97AC-2EB88CFB285F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M320_IMS_2023_2024", "M320_IMS_2023_2024\M320_IMS_2023_2024.csproj", "{FE94F66F-E0BA-49BC-97AC-2EB88CFB285F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OO_Functions", "OO_Functions\OO_Functions.csproj", "{059C0A2D-DD96-40B0-8622-DBFD9486C3A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OO_Functions", "OO_Functions\OO_Functions.csproj", "{059C0A2D-DD96-40B0-8622-DBFD9486C3A1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rectangle_Aufgabe", "Rectangle_Aufgabe\Rectangle_Aufgabe.csproj", "{BCEF6052-C6E7-40EB-964E-5DD1628DC6D4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scheitel_ABC", "Scheitel_ABC\Scheitel_ABC.csproj", "{03B9AA31-76E0-46F1-A35D-E9EAA341B0B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{5EE55FBD-2949-401A-8BDB-C37F2DDA3E34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{059C0A2D-DD96-40B0-8622-DBFD9486C3A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{059C0A2D-DD96-40B0-8622-DBFD9486C3A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{059C0A2D-DD96-40B0-8622-DBFD9486C3A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCEF6052-C6E7-40EB-964E-5DD1628DC6D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCEF6052-C6E7-40EB-964E-5DD1628DC6D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCEF6052-C6E7-40EB-964E-5DD1628DC6D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCEF6052-C6E7-40EB-964E-5DD1628DC6D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03B9AA31-76E0-46F1-A35D-E9EAA341B0B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03B9AA31-76E0-46F1-A35D-E9EAA341B0B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03B9AA31-76E0-46F1-A35D-E9EAA341B0B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03B9AA31-76E0-46F1-A35D-E9EAA341B0B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EE55FBD-2949-401A-8BDB-C37F2DDA3E34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EE55FBD-2949-401A-8BDB-C37F2DDA3E34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EE55FBD-2949-401A-8BDB-C37F2DDA3E34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EE55FBD-2949-401A-8BDB-C37F2DDA3E34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
