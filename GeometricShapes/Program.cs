@@ -22,11 +22,31 @@ namespace GeometricShapes
                 shape.PrintArea();
 
 
-                if (shape is IRotatable rotatable)
-                {
-                    rotatable.RotatateShape90Degrees();
-                }
             }
+
+            Console.WriteLine("Do you want to rotate the shapes\nNo : n\nYes: y ");
+
+
+            var choice = Console.ReadLine();
+
+
+            if (choice == "n")
+            {
+                Console.WriteLine("No Rotation");
+            }
+            if (choice == "y")
+            {
+
+                foreach (Shapes shape in shapes)
+                {
+                    if (shape is IRotatable rotatable)
+                    {
+                        rotatable.RotatateShape90Degrees();
+                    }
+                }
+
+            }
+
 
         }
     }

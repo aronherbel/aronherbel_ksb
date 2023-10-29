@@ -24,7 +24,7 @@ namespace GeometricShapes
 
         public override void PrintPosition()
         {
-            Console.WriteLine($"centre point of {ShapeName}: [ {PostitionX} | {PostitionY} ]");
+            Console.WriteLine($"centre point of {ShapeName}: [ {PositionX} | {PositionY} ]");
         }
 
        

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GeometricShapes
 {
-    public class Rectangle : Shapes
+    public class Rectangle : Shapes, IRotatable
     {
         public float Width { get; set; }
         public float Height { get; set; }
@@ -28,6 +28,18 @@ namespace GeometricShapes
         {
             double area = Width * Height;
             Console.WriteLine($"area of {ShapeName}: {area}");
+        }
+
+        public void RotatateShape90Degrees()
+        {
+            float originalX = PositionX;
+            float originalY = PositionY;
+
+            PositionX = originalY;
+            PositionY = originalX - Height;
+           
+
+            Console.WriteLine($"The new Position of {ShapeName} is [ {PositionX} | {PositionY} ]");
         }
 
     }
