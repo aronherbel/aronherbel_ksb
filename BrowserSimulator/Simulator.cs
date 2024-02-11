@@ -9,34 +9,91 @@ namespace BrowserSimulator
 {
     public class Simulator
     {
-       
-        public void Run() 
-        {
-            do
-            {
+        private StringStack historyStack = new StringStack();
+        private StringStack forwardStack = new StringStack();
+        private StringStack stack = new StringStack();
+        private string currentUrl = "";
+        private GenericStack<double> doubleStack = new GenericStack<double>(); 
+        
+        private GenericStack<int> intStack = new GenericStack<int>();
 
-                Console.Write("Geben sie eine URL ein: ");
+        private GenericStack<float> floatStack = new GenericStack<float>();
+
+        public void Run()
+        {
+
+            while (true)
+            {
+                Console.Clear();
+                DisplayUrl();
+                Console.Write("Geben sie eine URL ein (u: zurück, r: vorwärts, e: schliessen ):");
                 string url = Console.ReadLine();
                 BrowseUrl(url);
 
-
-
-                if (url == "e")
+                switch (url)
                 {
-                    break;
+                    case "e":
+                        Environment.Exit(0);
+                        break;
+                    case "u":
+                        Undo();
+                        break;
+                    case "r":
+                        Redo();
+                        break;
+                    default:
+                        BrowseUrl(url);
+                        break;
                 }
 
-                Console.Write("Geben sie eine URL ein: ");
+            }
 
-            } while(true);
-            
 
         }
 
         public void BrowseUrl(string url)
         {
-            Console.WriteLine("Lade:" + url);
+            if (!string.IsNullOrEmpty(currentUrl))
+            {
+                historyStack.Push(currentUrl);
+                forwardStack.Clear();   
 
+            }
+            currentUrl = url;
+            Console.WriteLine("Lade:" + url);
+            
+
+        }
+
+        private void Undo()
+        {
+            if (historyStack.Count > 0)
+            {
+                forwardStack.Push(currentUrl);
+                currentUrl = historyStack.Pop();
+            }
+            else
+            {
+                Console.WriteLine("Keine vorherige Seite vorhanden");
+            }
+
+        }
+        private void Redo()
+        {
+            if (forwardStack.Count > 0)
+            {
+                historyStack.Push(currentUrl);
+                currentUrl = forwardStack.Pop();
+            }
+            else
+            {
+                Console.WriteLine("Keine vorherige Seite vorhanden");
+            }
+        }
+
+            private void DisplayUrl()
+        {
+            Console.WriteLine($"Die aktuelle ist {currentUrl}");
         }
     }
 }

@@ -8,20 +8,20 @@ using System.Threading.Tasks;
 namespace BrowserSimulator
 {
 
-    public class StringStack
+    public class GenericStack<T>
     {
 
-        private string[] stringStack;
+        private T[] genericStack;
         private int currentIndex { get; set; }
 
-        public StringStack()
+        public GenericStack()
         {
-            stringStack = new string[10];
+            genericStack = new T[10];
             currentIndex = 0;
         }
 
 
-        public void Push(string value)
+        public void Push(T value)
         {
             if (currentIndex == 10)
             {
@@ -29,44 +29,45 @@ namespace BrowserSimulator
             }
             else
             {
-                this.stringStack[currentIndex] = value;
+                this.genericStack[currentIndex] = value;
                 currentIndex++;
             }
 
         }
-        public string Pop()
+        public T Pop()
         {
             if (currentIndex == 0)
             {
-                return "Es wurden keine Seiten vorher aufgerufen";
+
+                return default(T);
             }
             else
             {
                 --currentIndex;
-                return stringStack[currentIndex]; ;
+                return genericStack[currentIndex];
             }
 
         }
 
-        public string Peak()
+        public T Peak()
         {
             if (currentIndex == 0)
             {
-                Console.WriteLine("Der Stack ist Momentan noch Leer");
-                return null;
+                return default(T);
+                
             }
 
-            return stringStack[currentIndex - 1];
+            return genericStack[currentIndex - 1];
         }
         public void Clear()
         {
-            Array.Clear(stringStack, 0, stringStack.Length);
+            Array.Clear(genericStack, 0, genericStack.Length);
             currentIndex = 0;
         }
 
         public int Count
         {
-            get { return stringStack.Length; }
+            get { return genericStack.Length; }
         }
     }
 

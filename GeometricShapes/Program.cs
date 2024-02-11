@@ -14,6 +14,7 @@ namespace GeometricShapes
                 new Circle("circle1",30, 20, 10),
                 new Rectangle("rectangle1",250, 170, 8, 4 ),
                 new Square("square1", 300, 300, 6, 6),
+                new Circle("circle2"),
             };
 
             foreach (Shapes shape in shapes)

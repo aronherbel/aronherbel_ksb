@@ -8,6 +8,16 @@ namespace Scheitel_ABC
 {
     internal class Formels
     {
+        private Formels a;
+        private Formels b;
+        private Formels c;
+
+
+        public Formels A { get; set; }
+        public Formels B { get; set; }  
+        public Formels C { get; set; }  
+
+
         public static string Abc_Formel(int a, int b, int c)
         {
             

@@ -24,7 +24,7 @@ namespace Fussballmanschaft
         public string currentTeam { get; set; } = "Barcelona";
         private bool geklappt { get; set; } = true; 
          
-        public Manschaft(string name, Torwart torwart) { 
+        public Manschaft(string name, Torwart torwart) {
             
             this.clubName = name;
             this.feldspielerListe = new List<Feldspieler>();

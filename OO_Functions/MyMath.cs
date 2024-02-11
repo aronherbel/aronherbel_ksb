@@ -106,12 +106,14 @@ namespace OO_Functions
             int temp = a;
             a = b;
             b = temp;
+
         }
 
         public static void ReverseArray(int[] array)
         {
             int left = 0;
             int right = array.Length - 1;
+           
 
             while (left < right)
             {
@@ -122,7 +124,6 @@ namespace OO_Functions
                 left++;
                 right--;
             }
-            
         }
     }
 }

@@ -21,8 +21,7 @@ internal class Program
                 if(auswahl == 5)
                 {
                     Console.WriteLine("Abruch...");
-
-                    break;  
+                    break; 
                 }
 
                 switch(auswahl)
@@ -222,9 +221,10 @@ internal class Program
                         break;
                     }
 
-
+                    break;
 
                 }
+                break;
 
                 if(auswahlWeiter2 == 2)
                 {

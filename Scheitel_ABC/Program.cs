@@ -15,6 +15,9 @@
             switch(auswahl)
             {
                 case 1:
+
+                    Console.WriteLine("geben sie Ihre werte ein in form von y = ax2 + bx + c");
+                    
                     string A;
                     string B;
                     string C;
